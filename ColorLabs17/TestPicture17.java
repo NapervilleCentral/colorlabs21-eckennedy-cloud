@@ -20,43 +20,58 @@ public class TestPicture17
   {
       //opens picture using a dialog box
       /**/
-     String fileName = FileChooser.pickAFile();
-     Picture pictObj = new Picture(fileName);
-     pictObj.explore();
+     //String fileName = FileChooser.pickAFile();
+     //Picture pictObj = new Picture(fileName);
+     //pictObj.explore();
 
      //opens a pictue using a path
      //Picture apic = new Picture("C:\\Users\\khayes\\Favorites\\Documents\APCS- Java\chap03\Curriclum 2013\Picture Color labs\images\\beach.jpg");
      
-     //relative path
+     //relative path    looks for a directory/folder/file
      Picture apic = new Picture("images\\beach.jpg");
      Picture ferris1 = new Picture("images/2000 ferris wheel2.jpg");
-     Picture ferris2 = new Picture("images/2000 ferris wheel2.jpg");
+     Picture moto = new Picture("images/blueMotorcycle.jpg");
      Picture ferris3 = new Picture("images/2000 ferris wheel2.jpg");
 
-     //apic.explore();
+     apic.explore();
      ferris1.explore();
+     moto.explore();
      
+     //to change color of picture, get all of the pixels
      //makes an array of pixels
      Pixel[] pixels;
      //gets pixels from picture and assigns to pixels array
      pixels = ferris1.getPixels();
     
      //how many pixels or how large array
-    System.out.println("This is a large array"+pixels.length  );
+    System.out.println("This is a large array "+pixels.length  );
 
 
     /**/
         //access each index
-    System.out.println(pixels[17]);
-    //access each pixel
+    System.out.println(pixels[17]);//array notation
+    //access each pixel picture method of get a pixel
     Pixel spot = ferris1.getPixel(100,100);
-    
+    Pixel spot50 = ferris1.getPixel(50,50);
+    Color ltSteel =  new Color(176,196,222);
     System.out.println(pixels[17].getColor());
     System.out.println(spot);
+    
+    Pixel spot17 = pixels[17];
+    spot17.setRed(200);
+    spot17.setBlue(150);
+    spot17.setGreen(175);
+    
+    spot.setColor(Color.yellow);
+    spot50.setColor(Color.ltSteel);
+    
+    ferris1.explore();
 /*
-    pixels[17].setColor(Color.blue);
-    spot.setColor(new Color(252,252,252));
-    pixels[500034].setColor(Color.blue);
+ *  
+ */
+    //pixels[17].setColor(Color.blue);
+    //spot.setColor(new Color(252,252,252));
+    //pixels[500034].setColor(Color.blue);
 
     ferris1.explore();
 /*
