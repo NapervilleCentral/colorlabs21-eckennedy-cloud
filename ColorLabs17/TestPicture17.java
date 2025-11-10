@@ -8,7 +8,8 @@
  */
 import java.awt.*;
 import java.util.*;
-import java.util.List; // resolves problem with java.awt.List and java.util.List
+import java.util.List;
+import java.util.Random; // resolves problem with java.awt.List and java.util.List
 public class TestPicture17
 {
 
@@ -63,7 +64,7 @@ public class TestPicture17
     spot17.setGreen(175);
     
     spot.setColor(Color.yellow);
-    spot50.setColor(Color.ltSteel);
+    spot50.setColor(ltSteel);
     
     ferris1.explore();
 /*
@@ -74,15 +75,38 @@ public class TestPicture17
     //pixels[500034].setColor(Color.blue);
 
     ferris1.explore();
-/*
+    
+/**/
    // loop to access indexes of array or collection
 
     //for each loop spot  is a ?
-    for (Pixel spot : pixels)
-    System.out.println( spot );
+    int red;
+    for (Pixel spot1 : pixels)
+    {
+    red=spot1.getRed();
+    red=(int)(red*.25);
+    spot1.setRed(red);
+}
+ferris1.explore();
 
+/*int blue;
+for (Pixel spot1 : pixels)
+{
+    blue=spot1.getBlue();
+    blue = (int)(Math.random()*blue);
+    spot1.setBlue(blue);
+}
+ferris1.explore();*/
 
-   
+int green;
+int count=0;
+for (Pixel spot1 : pixels)
+    {
+        if (count%20 == 0)
+        { spot1.setColor(Color.yellow);
+            count++;}
+    }
+    ferris1.explore();
  /**/
 
  /**
