@@ -71,9 +71,9 @@ public class colorLabs{
             red=spot1.getRed();
             green=spot1.getGreen();
             blue=spot1.getBlue();
-            red = red+50;
-            green = green+50;
-            blue= blue+50;
+            red = red+100;
+            green = green+100;
+            blue= blue+100;
             spot1.setRed(red);
             spot1.setGreen(green);
             spot1.setBlue(blue);
@@ -89,9 +89,9 @@ public class colorLabs{
             red=spot1.getRed();
             green=spot1.getGreen();
             blue=spot1.getBlue();
-            red = red-50;
-            green = green-50;
-            blue= blue-50;
+            red = red-100;
+            green = green-100;
+            blue= blue-100;
             spot1.setRed(red);
             spot1.setGreen(green);
             spot1.setBlue(blue);
@@ -103,40 +103,44 @@ public class colorLabs{
         Pixel[] pixels6;
         pixels6 = whiteFlower.getPixels();
         
-        for(Pixel spot1: pixels6)
+        for(Pixel spot2: pixels6)
         {
-            red=spot1.getRed();
-            green=spot1.getGreen();
-            blue=spot1.getBlue();
-            red = red+25;
-            green = green+50;
+            red=spot2.getRed();
+            green=spot2.getGreen();
+            blue=spot2.getBlue();
+            red = red+250;
+            green = green+100;
             blue= blue-75;
-            spot1.setRed(red);
-            spot1.setGreen(green);
-            spot1.setBlue(blue);
+            spot2.setRed(red);
+            spot2.setGreen(green);
+            spot2.setBlue(blue);
         }
-        whiteFlower.getPixels();
+        whiteFlower.explore();
         
         //bluify()
-        barbaraS.explore();
         Pixel[] pixels7;
         pixels7 = barbaraS.getPixels();
         
         Pixel spot5=barbaraS.getPixel(66,71);
-        int bred= spot5.getRed();
-        int bgreen = spot5.getGreen();
-        int bblue = spot5.getBlue();
-        for(Pixel spot1: pixels6)
+        for(Pixel spot1: pixels7)
         {
             red=spot1.getRed();
             green=spot1.getGreen();
             blue=spot1.getBlue();
-            red = red+25;
-            green = green+50;
-            blue= blue-75;
-            spot1.setRed(red);
-            spot1.setGreen(green);
-            spot1.setBlue(blue);
+            if (red>=140 && red<=240){
+                System.out.println("yes");
+                if (green>=80 && green<=190){
+                    System.out.println("no");
+                    if (blue>=50 && blue<=190){
+                        gray = (int)((red+blue+green)/3);
+                        spot1.setRed(gray);
+                        spot1.setGreen(gray);
+                        spot1.setBlue(gray);
+                        System.out.println("run");
+                    }
+                }
+            }
         }
+        barbaraS.explore();
     }
 }
