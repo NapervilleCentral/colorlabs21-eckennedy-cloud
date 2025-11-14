@@ -105,7 +105,7 @@ public class shepardFaireyLab{
         }
         portrait.explore();
         portrait.write("images/Method2.jpg");*/
-        
+        portrait.explore();
         //method 3
         Pixel [] pixels1;
         int length =0;
@@ -116,33 +116,38 @@ public class shepardFaireyLab{
         green=spot1.getGreen();
         blue=spot1.getGreen();
         gray= (int)((blue+green+red)/3);
-        if (gray>=0 && gray<51){
-            spot1.setRed(255);
-            spot1.setGreen(145);
-            spot1.setBlue(164);
+        if (gray>=0 && gray<70){
+            spot1.setRed(128);
+            spot1.setGreen(0);
+            spot1.setBlue(128);
         }
-        if (gray>=51 && gray<102){
+        if (gray>=70 && gray<100){
             spot1.setRed(255);
             spot1.setGreen(102);
             spot1.setBlue(204);
         }
-        if (gray>=102 && gray<153){
-            spot1.setRed(250);
-            spot1.setGreen(249);
-            spot1.setBlue(246);
+        if (gray>=100 && gray<130){
+            spot1.setRed(230);
+            spot1.setGreen(180);
+            spot1.setBlue(200);
         }
-        if (gray>=153 && gray<204){
+        if (gray>=130 && gray<200){
             spot1.setRed(255);
-            spot1.setGreen(192);
-            spot1.setBlue(203);
+            spot1.setGreen(200);
+            spot1.setBlue(200);
         }
-        if (gray>=204 && gray<=255){
-            spot1.setRed(255);
-            spot1.setGreen(182);
-            spot1.setBlue(193);
+        if (gray>=200&&gray<230){
+            spot1.setRed(90);
+            spot1.setGreen(70);
+            spot1.setBlue(120);
+        }
+        if (gray>=230 && gray<255){
+            spot1.setRed(150);
+            spot1.setGreen(42);
+            spot1.setBlue(85);
         }
         }
         portrait.explore();
-        portrait.write("images/Try1.jpg");
+        portrait.write("images/FinalFormat.jpg");
     }
 }
