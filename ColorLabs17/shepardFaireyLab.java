@@ -107,6 +107,7 @@ public class shepardFaireyLab{
         portrait.write("images/Method2.jpg");*/
         portrait.explore();
         //method 3
+        //whatever you want
         Pixel [] pixels1;
         int length =0;
         pixels1=portrait.getPixels();
