@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=mirrorTemple
+comment0.text=\r\n\ Emma\ Kennedy\r\n\ 5/5/26\r\n\ mirror\ temple\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=temple
+comment2.target=void\ mirrorHorizontal(Picture)
+numComments=3
