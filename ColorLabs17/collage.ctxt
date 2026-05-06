@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=collage
+comment0.text=\r\n\ creates\ a\ poster\ with\ different\ versions\ of\ an\ image\r\n\r\n\ @Emma\ Kennedy\r\n\ @5/6/26\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=source\ target
+comment2.target=void\ copytoCanvas(Picture,\ Picture)
+comment3.params=source
+comment3.target=void\ negate(Picture)
+numComments=4
