@@ -7,4 +7,6 @@ comment2.params=source\ target
 comment2.target=void\ copytoCanvas(Picture,\ Picture)
 comment3.params=source
 comment3.target=void\ negate(Picture)
-numComments=4
+comment4.params=source
+comment4.target=void\ mirrorVertical(Picture)
+numComments=5
